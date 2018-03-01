@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $("#login-form").click(function(){
+    $("#submit").click(function(){
+        console.log("I am JQuery")
         var username = $(".username").val();
         var password = $(".password").val();
         if (username.replace(/(^\s*)|(\s*$)/g, "").length != 0 && password.replace(/(^\s*)|(\s*$)/g, "").length != 0 ){
@@ -10,6 +11,13 @@ $(document).ready(function(){
                 data: formjson,
                 success: function(data){
                     console.log(data)
+                    var rdata = jQuery.parseJSON(data);
+                    if (rdata.data.status == 'success'){
+                        window.location.replace("http://localhost:5000/index");
+                    }
+                    else{
+                        alert("用户名或密码错误")
+                    }
                 }
             });
         }

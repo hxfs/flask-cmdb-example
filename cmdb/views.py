@@ -1,5 +1,5 @@
 # _*_ coding: utf-8 _*_
-from flask import render_template, request
+from flask import render_template, request, session
 from models import User
 import json
 
@@ -15,19 +15,20 @@ def register_view(app):
         if request.method == 'POST':
             username = request.form.get('username')
             password = request.form.get('password')
-            print username, password
+            # print username, password
             user = User.query.filter_by(username=username).first()
             if user is not None and password == user.password:
                 messages = {"code": 200, "data": {
-                                "status": "success",
-                                "info": None
-                            }}
+                    "status": "success",
+                    "info": None
+                }}
+                session['username'] = username
                 return json.dumps(messages)
             else:
                 messages = {"code": 200, "data": {
-                                "status": "failed",
-                                "info": "username or password error"
-                            }}
+                    "status": "failed",
+                    "info": "username or password error"
+                }}
                 return json.dumps(messages)
         return render_template("login.html")
 
