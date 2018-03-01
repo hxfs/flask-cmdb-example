@@ -1,0 +1,114 @@
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.header{
+    height: 50px;
+    background: rgb(40,43,51);
+}
+.container-full {
+    margin: 0 auto;
+    width: 100%;
+  }
+.index{
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 40px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.homer ul{
+    list-style: none;
+    margin: 0 10px 0 0;
+    float: right;
+}
+
+.homer ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 40px;
+}
+
+.homer ul li a, .index a{
+    line-height: inherit;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+}
+
+.left-con{
+    width: 18%;
+    height: calc(100vh - 50px);
+    box-sizing:border-box;
+    float: left;
+    background: rgb(243, 245, 247);
+}
+
+.right-con{
+    width: 82%;
+    height: calc(100vh - 50px);
+    box-sizing:border-box;
+    float: right;
+}
+
+.left-con .dash-board {
+    width: 90%;
+    background: rgb(30,105,228);
+    margin: 10px auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 2px;
+    position: relative;
+    letter-spacing: 1px;
+    display: block;
+    
+}
+.dash-board a{
+    text-decoration: none;
+    color: white;
+}
+.dash-board a:hover{
+    text-decoration: none;
+    color: white;
+}
+.dash-board span{
+    position: absolute;
+    left: 20%;
+    top: 27%;
+}
+.nav-list ul{
+    margin: 0;
+}
+.nav-list ul a{
+    height: 42px;
+    display: block;
+    padding: 0 10px;
+    line-height: 42px;
+    text-decoration: none;
+}
+.nav-list li{
+    list-style: none;
+    font-family: Lato,sans-serif;
+    font-size:17px;
+    font-weight: 400;
+}
+.nav-list span{
+    margin: 0 10px;
+}
+
+.right-con .banner{
+    height: 70px;
+    width: 100%;
+    background: rgb(228,231,238)
+}
+.right-con .banner .dash-board1 h3{
+    margin: 0;
+    padding: 0;
+    line-height: 70px;
+    margin-left: 25px;
+    color: rgb(32,107,228)
+}
