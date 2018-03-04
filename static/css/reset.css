@@ -349,3 +349,16 @@
   [hidden] {
     display: none;
   }
+
+  /* custorm */
+  ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }

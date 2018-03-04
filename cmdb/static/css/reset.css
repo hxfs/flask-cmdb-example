@@ -72,7 +72,7 @@
  
   a:hover { 
     text-decoration: none;
-    color: white; 
+    color: black; 
   } 
   a:active { 
     color:#FFFFFF; 
@@ -348,4 +348,17 @@
   
   [hidden] {
     display: none;
+  }
+  /* custorm */
+  html, body, ul,li, p{margin: 0;padding: 0}
+  ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
   }

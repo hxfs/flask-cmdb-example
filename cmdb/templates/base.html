@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"> 
-    {% block custom_style %} {% endblock %} 
-    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}?id=1233444"> {% block custom_style %} {% endblock %} {% block head %}
     <title>{% block title %}{% endblock %} - Play With Flask - </title>
     {% endblock %}
 </head>
@@ -33,63 +31,186 @@
             </ul>
         </div>
     </div>
-    <div class="container-full">
-        <div class="left-con">
-            <div class="dash-board">
-                <a href="#">
-                    <span class="glyphicon glyphicon-dashboard"></span>
-                    Dashboard
-                </a>
-
-            </div>
-
-            <div class="nav-list">
-                <ul>
-                    <a href="#">
-                        <li>
-                            <span class="glyphicon glyphicon-list"></span>
-                            Components</li>
-                    </a>
-                    <a href="#">
-                        <li>
-                            <span class="glyphicon glyphicon-folder-open"></span>
-                            Page</li>
-                    </a>
-                    <a href="#">
-                        <li>
-                            <span class="glyphicon glyphicon-tags"></span>
-                            Elements</li>
-                    </a>
-                    <a href="#">
-                        <li>
-                            <span class="glyphicon glyphicon-align-left"></span>
-                            Table</li>
-                    </a>
-                    <a href="#">
-                        <li>
-                            <span class="glyphicon glyphicon-signal"></span>
-                            Forms</li>
-                    </a>
-                    <a href="#">
-                        <li>
-                            <span class="glyphicon glyphicon-book"></span>
-                            Help&Support</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-
-        <div class="right-con">
-            <div class="banner">
-                <div class="dash-board1">
-                    <h3>{% block other_title %} {% endblock %}</h3>
-
-                </div>
-                {% block right_content %} {% endblock %}
-
-            </div>
+    <div id="page-sidebar" class="scrollable-content">
+        <div id="sidebar-menu" class="active">
+            <ul>
+                <li>
+                    <div class="current-page">
+                        <span class="glyphicon glyphicon-dashboard"></span>
+                        Dashboard</div>
+                    <div class="box-drawer">
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="glyphicon glyphicon-folder-open"></span>
+                        Components</div>
+                    <div class="box-drawer">
+                        <p class="zcd">
+                            <!-- <span class="demo"></span> -->
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="glyphicon glyphicon-tags"></span>
+                        Page</div>
+                    <div class="box-drawer">
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="glyphicon glyphicon-align-left"></span>
+                        Widgets</div>
+                    <div class="box-drawer">
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="glyphicon glyphicon-signal"></span>
+                        Elements</div>
+                    <div class="box-drawer">
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="glyphicon glyphicon-paperclip"></span>
+                        Charts</div>
+                    <div class="box-drawer">
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Tables</div>
+                    <div class="box-drawer">
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        Forms</div>
+                    <div class="box-drawer">
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="glyphicon glyphicon-book"></span>
+                        Help&amp;Support</div>
+                    <div class="box-drawer">
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="#">Components</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}?id=11221"></script> {% block custom_js %} {% endblock %}
 </body>
 
 </html>
