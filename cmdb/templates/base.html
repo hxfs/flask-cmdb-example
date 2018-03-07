@@ -23,10 +23,10 @@
                     <a href="">消息</a>
                 </li>
                 <li>
-                    <a href="">用户名</a>
+                    <a href="">{{ kw.username }}</a>
                 </li>
                 <li>
-                    <a href="">退出</a>
+                    <a href="" id="logout">退出</a>
                 </li>
             </ul>
         </div>
@@ -37,96 +37,83 @@
                 <li>
                     <div class="current-page">
                         <span class="glyphicon glyphicon-dashboard"></span>
-                        Dashboard</div>
-                    <div class="box-drawer">
-                        <p class="zcd">
-                            <a href="#">Components</a>
-                        </p>
-                        <p class="zcd">
-                            <a href="#">Components</a>
-                        </p>
-                        <p class="zcd">
-                            <a href="#">Components</a>
-                        </p>
-                        <p class="zcd">
-                            <a href="#">Components</a>
-                        </p>
+                        <a href="{{ url_for('index') }}">Dashboard</a> 
                     </div>
                 </li>
                 <li>
                     <div>
                         <span class="glyphicon glyphicon-folder-open"></span>
-                        Components</div>
+                        用户管理</div>
                     <div class="box-drawer">
                         <p class="zcd">
                             <!-- <span class="demo"></span> -->
-                            <a href="#">Components</a>
+                            <a href="{{ url_for('vpnuser') }}">VPN 用户</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="{{ url_for('jumpuser') }}">跳板机用户</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="{{ url_for('opm_user') }}">后台用户管理</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="{{ url_for('groupname') }}">项目组管理</a>
+                        </p>
+                        <p class="zcd">
+                            <a href="{{ url_for('iamuser') }}">AWS账户申请</a>
                         </p>
                     </div>
                 </li>
                 <li>
                     <div>
                         <span class="glyphicon glyphicon-tags"></span>
-                        Page</div>
+                        资源申请</div>
                     <div class="box-drawer">
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">计算资源</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">数据库资源</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">AWS服务资源</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">AWS权限资源</a>
                         </p>
                     </div>
                 </li>
                 <li>
                     <div>
                         <span class="glyphicon glyphicon-align-left"></span>
-                        Widgets</div>
+                        资源管理</div>
                     <div class="box-drawer">
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">EC2服务器</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">数据库</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">Elastic Beanstalk</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">ECS</a>
                         </p>
                     </div>
                 </li>
                 <li>
                     <div>
                         <span class="glyphicon glyphicon-signal"></span>
-                        Elements</div>
+                        我的工单</div>
                     <div class="box-drawer">
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">我创建的工单</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">我待办的工单</a>
                         </p>
                         <p class="zcd">
-                            <a href="#">Components</a>
-                        </p>
-                        <p class="zcd">
-                            <a href="#">Components</a>
+                            <a href="#">我参与的工单</a>
                         </p>
                     </div>
                 </li>
@@ -208,6 +195,10 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div class="right_content">
+    {% block right_content %}
+    {% endblock %}
     </div>
     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}?id=11221"></script> {% block custom_js %} {% endblock %}

@@ -45,6 +45,7 @@ body,html{
     padding-top: 10px;
     color: rgb(131,141,156);
     border-radius: 3px;
+    box-sizing:border-box;
 }
 
 #sidebar-menu span{
@@ -68,6 +69,10 @@ body,html{
     border-radius: 2px;
     line-height: 42px;
     width: 100%;
+}
+.current-page a{
+    line-height: 42px;
+    width: 200px;
 }
 .current-page:hover{
     background-color: rgb(29,105,227);   
@@ -94,4 +99,13 @@ body,html{
     display: inline-block;
     width: 160px;
     margin-left: 20px;
+}
+.right_content{
+    height: calc(100vh - 50px);
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 85%;
+    box-sizing:border-box;
+    background: rgb(247, 248, 252);
 }
