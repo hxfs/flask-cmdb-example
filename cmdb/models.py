@@ -9,7 +9,7 @@ class User(db.Model):
     __tablename__ = 'opm_user'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(50), nullable=False, unique=True)
-    password = db.Column(db.String(50), nullable=False)
+    password = db.Column(db.String(90), nullable=False)
     email = db.Column(db.String(40), nullable=False)
     create_time = db.Column(db.DateTime, nullable=False)
     group_name = db.Column(db.String(50), nullable=False)

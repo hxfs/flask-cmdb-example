@@ -1,5 +1,6 @@
 # _*_ coding: utf-8 _*_
 from flask import render_template, request, session, redirect, url_for
+from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 from models import User
 import json
@@ -30,7 +31,7 @@ def register_view(app):
             username = request.form.get('username')
             password = request.form.get('password')
             user = User.query.filter_by(username=username).first()
-            if user is not None and password == user.password:
+            if user is not None and check_password_hash(user.password,password):
                 messages = {
                     "code": 200,
                     "data": {
