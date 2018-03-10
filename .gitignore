@@ -21,4 +21,5 @@ htmlcov/
 .coverage.*
 *,cover
 migrations/*
+cmdb/*.pyc
 
