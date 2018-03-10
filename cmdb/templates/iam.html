@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block custom_style %} 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/iam.css') }}">
 {% endblock %} 
 {% block title %}IAM{% endblock %}
 
@@ -9,10 +9,50 @@
 {% endblock %}
 
 {% block right_content %} 
-    我是aws IAM 页面
+    <div class="container-fluid">
+        <div class="banner">
+            <div class="banner_title">Home>用户管理>申请AWS用户</div>
+        </div>
+        <div class="ticket_body">
+            <div class="ticket_title">
+                AWS IAM 用户申请
+            </div>
+            <div class="ticket_table">
+                <div class="tick_type">
+                    <span>工单类型</span>
+                    <select name="iam-sel" id="iam-sel">
+                        <option value="none">--请选择工单类型--</option>
+                        <option value="iam-user">IAM 用户申请</option>
+                        <option value="iam-role">IAM 角色申请</option>
+                    </select>
+                </div>
+                <div class="tick_type">
+                    <span>标题</span>
+                    <input type="text" class="type_name">
+                </div>
+                <div class="tick_type">
+                    <span>需求</span>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="bt-box">
+                <div class="bt-list">
+                    <div class="bt-submit">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        提交</div>
+                    <div class="bt-save">
+                        <span class="glyphicon glyphicon-saved"></span>
+                        保存</div>
+                    <div class="bt-reset">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                        重置</div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block custom_js %} 
-
+<script type="text/javascript" src="{{ url_for('static', filename='js/iam.js') }}"></script>
 {% endblock %}
 

@@ -31,5 +31,5 @@ $(document).ready(function(){
     $('.box-drawer').click(function(e){
         e.stopPropagation();
     });
-    
+
 });
