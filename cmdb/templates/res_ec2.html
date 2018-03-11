@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block custom_style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/res_ec2.css') }}"> {% endblock %} {% block title %}后台用户{% endblock %} {% block other_title %} DashBoard {% endblock %} {% block right_content
+%}
+<div class="container-fluid">
+    <div class="banner">
+        <div class="banner_title">Home>资源申请>EC2申请</div>
+    </div>
+</div>
+{% endblock %} {% block custom_js %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/res_ec2.js') }}"></script> {% endblock %}

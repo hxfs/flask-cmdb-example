@@ -91,6 +91,11 @@ def register_view(app):
     @check_login
     def iamuser(*args, **kw):
         return render_template("iam.html", **locals())
+    
+    @app.route('/res_ec2')
+    @check_login
+    def res_ec2(*args, **kw):
+        return render_template("res_ec2.html", **locals())
 
     @app.route('/test', methods=['GET', 'POST'])
     def test():

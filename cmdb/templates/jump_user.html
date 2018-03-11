@@ -1,18 +1,125 @@
-{% extends "base.html" %}
-{% block custom_style %} 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-{% endblock %} 
-{% block title %}用户管理{% endblock %}
+{% extends "base.html" %} {% block custom_style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/opm_user.css') }}"> {% endblock %} {% block title %}后台用户{% endblock %} {% block other_title %} DashBoard {% endblock %} {% block right_content
+%}
+<div class="container-fluid">
+    <div class="banner">
+        <div class="banner_title">Home>用户管理>添加跳板机用户</div>
+        <div class="add">
+            <span class="add_title">添加用户:</span>
+            <input type="text" class="add_user" placeholder="添加用户">
+            <button class="add_bt search_bt">添加
+                <span class="glyphicon glyphicon-ok"></span>
+            </button>
+        </div>
+        <div class="search">
+            <span class="searc_title">用户查找: </span>
+            <input type="text" class="search_user" placeholder="请输入用户名">
+            <button class="search_bt">搜索
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+    </div>
+    <div class="table-title">用户列表</div>
+    <table class="table table-striped table-bordered use-table">
+        <tr>
+            <th>用户名</th>
+            <th>邮箱</th>
+            <th>加入时间</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>admin</td>
+            <td>admin@ushareit.com</td>
+            <td>2018/03/09 12:34:33</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>row 1</td>
+            <td>
+                <span class="btn btn-primary">修改</span>
+                <span class="btn btn-danger">删除</span>
+            </td>
+        </tr>
 
-{% block other_title %}
-    DashBoard
-{% endblock %}
+    </table>
 
-{% block right_content %} 
-    跳板机用户管理
-{% endblock %}
-
-{% block custom_js %} 
-
-{% endblock %}
-
+</div>
+{% endblock %} {% block custom_js %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/opm_user.js') }}"></script> {% endblock %}

@@ -13,7 +13,7 @@
     color: white;
 }
 .ticket_body{
-    border: 1px solid black;
+    
     width: 98%;
     margin: 20px auto;
     height: 600px;
@@ -28,7 +28,7 @@
 .ticket_table{
     height: 350px;
     width: 600px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 20px auto;
 }
 
@@ -66,13 +66,13 @@
     background-color: rgb(155,171,182);   
 }
 .tick_type{
-    height: 30px;
+    /* height: 30px; */
     width: 520px;
     margin: 10px auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    position: relative;
 }
 .tick_type span {
-    border: 1px solid;
     display: inline-block;
     line-height: 30px;
     text-align: center;
@@ -86,12 +86,20 @@
     outline: none;
     border-radius: 0;
     width: 240px;
-    padding: 20px;
 }
 .type_name{
-    width: 400px;
+    width: 410px;
     height: 30px;
     line-height: 30px;
     border: 1px solid rgb(155,171,182);
     outline: none;
+}
+.tick_con{
+    width: 410px;
+    height: 150px; 
+    clear: both;
+}
+.tick_need{
+    transform: translateY(-15px)
+
 }
